@@ -1,0 +1,7 @@
+com.example.messengerapp.test.app-core-1.6.1-0 /Users/pashahurs/.gradle/caches/8.13/transforms/0e4e41158486c7cb5b96bedb785551a8/transformed/core-1.6.1/res
+com.example.messengerapp.test.app-tracing-1.2.0-1 /Users/pashahurs/.gradle/caches/8.13/transforms/70de6dc92f2eb4dfbd3257878ddabe09/transformed/tracing-1.2.0/res
+com.example.messengerapp.test.app-androidTest-2 /Users/pashahurs/Projects/itmo/mobile_dev_itmo/Lab1/App/app/build/generated/res/resValues/androidTest/debug
+com.example.messengerapp.test.app-updated_navigation_xml-3 /Users/pashahurs/Projects/itmo/mobile_dev_itmo/Lab1/App/app/build/generated/updated_navigation_xml/debugAndroidTest
+com.example.messengerapp.test.app-mergeDebugAndroidTestResources-4 /Users/pashahurs/Projects/itmo/mobile_dev_itmo/Lab1/App/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.example.messengerapp.test.app-mergeDebugAndroidTestResources-5 /Users/pashahurs/Projects/itmo/mobile_dev_itmo/Lab1/App/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.example.messengerapp.test.app-debugAndroidTest-6 /Users/pashahurs/Projects/itmo/mobile_dev_itmo/Lab1/App/app/build/intermediates/merged_res/debugAndroidTest/mergeDebugAndroidTestResources

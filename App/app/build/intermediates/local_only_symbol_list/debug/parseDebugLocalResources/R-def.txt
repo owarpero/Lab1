@@ -1,0 +1,35 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color ic_launcher_background
+color white
+id action_settings
+id bottom_nav
+id feedFragment
+id nav_graph
+id nav_host_fragment
+id profileFragment
+id settingsFragment
+id theme_switch
+layout activity_main
+layout fragment_feed
+layout fragment_profile
+layout fragment_settings
+menu bottom_nav_menu
+menu menu_main
+mipmap ic_launcher
+mipmap ic_launcher_foreground
+mipmap ic_launcher_round
+navigation nav_graph
+string action_settings
+string app_name
+string dark_theme
+string first_fragment_label
+string lorem_ipsum
+string next
+string previous
+string second_fragment_label
+style Base.Theme.MessengerApp
+style Theme.MessengerApp
+xml backup_rules
+xml data_extraction_rules
