@@ -1,1 +1,0 @@
-/Users/pashahurs/Projects/itmo/Lab1/App/app/build/intermediates/compiled_navigation_res/debug/compileDebugNavigationResources/navigation_nav_graph.xml.flat 

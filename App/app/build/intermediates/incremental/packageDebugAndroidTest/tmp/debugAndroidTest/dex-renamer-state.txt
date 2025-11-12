@@ -1,7 +1,0 @@
-#Wed Nov 12 22:26:53 MSK 2025
-base.0=/Users/pashahurs/Projects/itmo/mobile_dev_itmo/Lab1/App/app/build/intermediates/dex/debugAndroidTest/mergeExtDexDebugAndroidTest/classes.dex
-base.1=/Users/pashahurs/Projects/itmo/mobile_dev_itmo/Lab1/App/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/0/classes.dex
-path.0=classes.dex
-path.1=0/classes.dex
-renamed.0=classes.dex
-renamed.1=classes2.dex

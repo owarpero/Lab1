@@ -1,3 +1,0 @@
-com.example.messengerapp.test
-style WhiteBackgroundDialogTheme
-style WhiteBackgroundTheme
