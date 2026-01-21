@@ -15,6 +15,7 @@ import com.example.messengerapp.R
 import com.example.messengerapp.data.local.AppDatabase
 import com.example.messengerapp.data.remote.RetrofitClient
 import com.example.messengerapp.data.repository.MessageRepository
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 
 class FeedFragment : Fragment() {
@@ -28,6 +29,7 @@ class FeedFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var progressBar: ProgressBar
     private lateinit var emptyTextView: TextView
+    private lateinit var fabRefresh: FloatingActionButton
     private lateinit var adapter: MessageAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,6 +51,7 @@ class FeedFragment : Fragment() {
         setupViews(view)
         setupRecyclerView()
         setupMenu()
+        setupFab()
         observeViewModel()
     }
 
@@ -56,10 +59,13 @@ class FeedFragment : Fragment() {
         recyclerView = view.findViewById(R.id.recycler_view)
         progressBar = view.findViewById(R.id.progress_bar)
         emptyTextView = view.findViewById(R.id.text_empty)
+        fabRefresh = view.findViewById(R.id.fab_refresh)
     }
 
     private fun setupRecyclerView() {
-        adapter = MessageAdapter()
+        adapter = MessageAdapter { message ->
+            viewModel.onLikeClicked(message)
+        }
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
     }
@@ -80,6 +86,12 @@ class FeedFragment : Fragment() {
                 }
             }
         }, viewLifecycleOwner, Lifecycle.State.RESUMED)
+    }
+
+    private fun setupFab() {
+        fabRefresh.setOnClickListener {
+            viewModel.refreshMessages()
+        }
     }
 
     private fun observeViewModel() {

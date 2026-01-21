@@ -1,5 +1,6 @@
 package com.example.messengerapp.data.local
 
+import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
@@ -9,5 +10,7 @@ data class MessageEntity(
     val userId: Int,
     val title: String,
     val body: String,
-    val timestamp: Long = System.currentTimeMillis()
+    val timestamp: Long = System.currentTimeMillis(),
+    val isLiked: Boolean = false,
+    @Embedded(prefix = "user_") val userData: UserData? = null
 )

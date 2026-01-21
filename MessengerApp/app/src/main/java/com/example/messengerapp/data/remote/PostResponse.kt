@@ -14,5 +14,7 @@ fun PostResponse.toEntity() = MessageEntity(
     userId = userId,
     title = title,
     body = body,
-    timestamp = System.currentTimeMillis()
+    timestamp = System.currentTimeMillis(),
+    isLiked = false,
+    userData = null
 )

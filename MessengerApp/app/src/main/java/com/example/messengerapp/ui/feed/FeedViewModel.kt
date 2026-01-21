@@ -46,6 +46,20 @@ class FeedViewModel(private val repository: MessageRepository) : ViewModel() {
         }
     }
 
+    fun onLikeClicked(message: MessageEntity) {
+        viewModelScope.launch {
+            when (val result = repository.toggleLike(message.id)) {
+                is Resource.Success -> {
+                    Log.d("FeedViewModel", "Like toggled for message ${message.id}")
+                }
+                is Resource.Error -> {
+                    _errorMessage.value = "Failed to update like"
+                }
+                is Resource.Loading -> {}
+            }
+        }
+    }
+
     fun clearError() {
         _errorMessage.value = null
     }

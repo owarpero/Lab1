@@ -70,6 +70,13 @@ dependencies {
     // RecyclerView
     implementation(libs.recyclerview)
 
+    // WorkManager
+    implementation(libs.work.runtime.ktx)
+
+    // Glide
+    implementation(libs.glide)
+    kapt(libs.glide.compiler)
+
     implementation("androidx.fragment:fragment-ktx:1.6.2")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
