@@ -16,8 +16,8 @@ abstract class AppDatabase : RoomDatabase() {
         private val MIGRATION_1_2 = object : Migration(1, 2) {
             override fun migrate(database: SupportSQLiteDatabase) {
                 database.execSQL("ALTER TABLE messages ADD COLUMN isLiked INTEGER NOT NULL DEFAULT 0")
-                database.execSQL("ALTER TABLE messages ADD COLUMN user_name TEXT NOT NULL DEFAULT ''")
-                database.execSQL("ALTER TABLE messages ADD COLUMN user_email TEXT NOT NULL DEFAULT ''")
+                database.execSQL("ALTER TABLE messages ADD COLUMN user_name TEXT")
+                database.execSQL("ALTER TABLE messages ADD COLUMN user_email TEXT")
             }
         }
 
@@ -29,6 +29,7 @@ abstract class AppDatabase : RoomDatabase() {
                     "messenger_database"
                 )
                 .addMigrations(MIGRATION_1_2)
+                .fallbackToDestructiveMigration() // На случай проблем с миграцией - пересоздать БД
                 .build()
                 .also { INSTANCE = it }
             }

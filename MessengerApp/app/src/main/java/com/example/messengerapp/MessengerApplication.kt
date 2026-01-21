@@ -20,9 +20,9 @@ class MessengerApplication : Application() {
             .setRequiredNetworkType(NetworkType.CONNECTED)
             .build()
 
+        // Минимальный интервал для PeriodicWorkRequest - 15 минут
         val syncWorkRequest = PeriodicWorkRequestBuilder<SyncMessagesWorker>(
-            1, TimeUnit.MINUTES,
-            15, TimeUnit.SECONDS
+            15, TimeUnit.MINUTES
         )
             .setConstraints(constraints)
             .build()
